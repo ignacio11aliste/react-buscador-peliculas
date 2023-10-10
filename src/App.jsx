@@ -1,11 +1,9 @@
-import responseMovies from './mocks/with-results.json'
-import withoutResult from './mocks/no-result.json'
 import './App.css'
-
+import { useMovies } from './hooks/useMovies'
 import { Movies } from './components/Movies'
 
 function App() {
-  const movies = responseMovies.Search
+  const { movies } = useMovies()
   return (
     <div className='page'>
       <header>
